@@ -53,9 +53,6 @@ public class Reward {
     if(rawCode.contains("p:")) {
       this.executor = RewardExecutor.PLAYER;
       processedCode = StringUtils.replace(processedCode, "p:", "");
-    } else if(rawCode.contains("script:")) {
-      this.executor = RewardExecutor.SCRIPT;
-      processedCode = StringUtils.replace(processedCode, "script:", "");
     } else {
       this.executor = RewardExecutor.CONSOLE;
     }
@@ -117,7 +114,7 @@ public class Reward {
   }
 
   public enum RewardExecutor {
-    CONSOLE, PLAYER, SCRIPT
+    CONSOLE, PLAYER
   }
 
 }
